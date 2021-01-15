@@ -5,8 +5,10 @@ const defaultState = {
 export default function reducer(state = defaultState,action){
   switch (action.type) {
     case "ADD_NUM":
-      return{...state,counter:state.counter + action.num}
+      return{...state,counter:state.counter + action.num};
+    case "SUB_NUM":
+      return{...state,counter:state.counter - action.num}
     default:
-      break;
+      return state;
   }
 }
