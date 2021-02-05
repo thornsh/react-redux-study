@@ -7,7 +7,9 @@ export default function reducer(state = defaultState,action){
     case "ADD_NUM":
       return{...state,counter:state.counter + action.num};
     case "SUB_NUM":
-      return{...state,counter:state.counter - action.num}
+      return{...state,counter:state.counter - action.num};
+    case "THIRD_NUM":
+      return {...state,counter:state.counter + action.num*2};
     default:
       return state;
   }
